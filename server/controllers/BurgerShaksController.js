@@ -1,14 +1,15 @@
 import BaseController from '../utils/BaseController'
+import { burgerShaksService } from '../services/BurgerShaksService'
 
 export class BurgerShaksController extends BaseController {
   constructor() {
     super('api/burgers')
     this.router
-    .get('', this.getAll)
-    .get('/:id', this.getById)
-    .post('', this.create)
-    .put('/:id', this.edit)
-    .delete('/:id', this.delete)
+      .get('', this.getAll)
+      .get('/:id', this.getById)
+      .post('', this.create)
+      .put('/:id', this.edit)
+      .delete('/:id', this.delete)
   }
 
   getAll(req, res, next) {
@@ -28,5 +29,4 @@ export class BurgerShaksController extends BaseController {
       next(error)
     }
   }
-
 }
