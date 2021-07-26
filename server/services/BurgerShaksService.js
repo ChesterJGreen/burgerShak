@@ -1,4 +1,5 @@
 import { fakeDb } from '../db/fakedb'
+import { BadRequest } from '../utils/Errors'
 
 class BurgerShaksService {
   getAll() {
