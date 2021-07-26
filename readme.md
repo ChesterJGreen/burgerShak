@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# Node Server Setup
-=======
->>>>>>> 5aa5200f6a88318bf26d55aa8e0c1cb4237de853
 # Afternoon Challenge
 Students will replicate the functionality of the morning challenge by creating an API for burgers.
 
