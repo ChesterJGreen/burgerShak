@@ -10,7 +10,7 @@ export class BurgerShaksController extends BaseController {
       .get('/:id', this.getById)
       .post('', this.create)
       .put('/:id', this.edit)
-      // .delete('/:id', this.delete)
+      .delete('/:id', this.delete)
   }
 
   getAll(req, res, next) {
@@ -44,6 +44,15 @@ export class BurgerShaksController extends BaseController {
     try {
       const burger = burgerShaksService.edit(req.body)
       res.send(burger)
+    } catch (error) {
+      next(error)
+    }
+  }
+
+  delete(req, res, next) {
+    try {
+      burgerShaksService.delete(req.params.id)
+      res.send('deleted')
     } catch (error) {
       next(error)
     }
