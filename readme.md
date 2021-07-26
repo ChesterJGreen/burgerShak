@@ -1,8 +1,9 @@
-# Node Server Setup
 # Afternoon Challenge
 Students will replicate the functionality of the morning challenge by creating an API for burgers.
 
 
+
+# Node Server Setup
 This template is designed to help kickstart a node project. The bulk of the structure has been setup but requires a few pieces of configuration.
 
 The first thing you will need to provide is in the `.env` file. You will need to supply the port, and mongoDb connectionstring. These environment variables are used throughout the template, so be sure to add them in when moving into production as well.
