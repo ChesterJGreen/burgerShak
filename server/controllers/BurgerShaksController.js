@@ -1,5 +1,6 @@
 import BaseController from '../utils/BaseController'
 import { burgerShaksService } from '../services/BurgerShaksService'
+import { fakeDb } from "../db/fakedb"
 
 export class BurgerShaksController extends BaseController {
   constructor() {
@@ -8,8 +9,8 @@ export class BurgerShaksController extends BaseController {
       .get('', this.getAll)
       .get('/:id', this.getById)
       .post('', this.create)
-      .put('/:id', this.edit)
-      .delete('/:id', this.delete)
+      // .put('/:id', this.edit)
+      // .delete('/:id', this.delete)
   }
 
   getAll(req, res, next) {
@@ -24,6 +25,15 @@ export class BurgerShaksController extends BaseController {
   getById(req, res, next) {
     try {
       const burger = burgerShaksService.getById(req.params.id)
+      res.send(burger)
+    } catch (error) {
+      next(error)
+    }
+  }
+
+  create(req, res, next) {
+    try {
+      const burger = burgerShaksService.create(req.body)
       res.send(burger)
     } catch (error) {
       next(error)

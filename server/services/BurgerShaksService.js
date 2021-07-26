@@ -13,5 +13,11 @@ class BurgerShaksService {
     }
     return burger
   }
+
+  create(body) {
+    fakeDb.burgers.push(body)
+    return body
+  }
 }
+
 export const burgerShaksService = new BurgerShaksService()
