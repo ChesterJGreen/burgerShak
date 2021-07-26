@@ -9,7 +9,7 @@ export class BurgerShaksController extends BaseController {
       .get('', this.getAll)
       .get('/:id', this.getById)
       .post('', this.create)
-      // .put('/:id', this.edit)
+      .put('/:id', this.edit)
       // .delete('/:id', this.delete)
   }
 
@@ -34,6 +34,15 @@ export class BurgerShaksController extends BaseController {
   create(req, res, next) {
     try {
       const burger = burgerShaksService.create(req.body)
+      res.send(burger)
+    } catch (error) {
+      next(error)
+    }
+  }
+
+  edit(req, res, next) {
+    try {
+      const burger = burgerShaksService.edit(req.body)
       res.send(burger)
     } catch (error) {
       next(error)
