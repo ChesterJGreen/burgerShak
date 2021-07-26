@@ -1,5 +1,5 @@
 # Node Server Setup
-Afternoon Challenge
+# Afternoon Challenge
 Students will replicate the functionality of the morning challenge by creating an API for burgers.
 
 
